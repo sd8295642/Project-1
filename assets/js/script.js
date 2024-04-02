@@ -1,12 +1,11 @@
+const tripName = document.getElementById('trip-name')
+const tripLocation = document.getElementById('trip-location')
+const tripStartDate = document.getElementById('trip-start')
+const tripEndDate = document.getElementById('trip-end')
+const saveBtn = document.getElementById('close-modal')
 
-const tripName = document.getElementById('#trip-name')
-const tripLocation = document.getElementById('#trip-location')
-const tripStartDate = document.getElementById('#trip-start')
-const tripEndDate = document.getElementById('#trip-end')
-const saveBtn = document.getElementById('btn')
-
-function readSavedTripsFromStorage() {
-    let savedTripArray = JSON.parse(localStorage.getItem('trip'));
+function getTripArray() {
+    let savedTripArray = JSON.parse(localStorage.getItem('savedTripArray'));
   
     if (!savedTripArray) {
       savedTripArray = [];
@@ -16,10 +15,14 @@ function readSavedTripsFromStorage() {
     return savedTripArray;
   }
 
+getTripArray();
+
 function createTripInput(event) {
     event.preventDefault();
-  
-    const savedTrip = document.querySelector('#trip').value;
+    
+    let savedTripArray = getTripArray();
+
+    const savedTrip = document.querySelector('#trip-name').value;
   
     if (!savedTrip) {
       console.error('You need a search input value!');
@@ -29,8 +32,6 @@ function createTripInput(event) {
     savedTripArray.push(savedTrip); 
 
     localStorage.setItem("trips", JSON.stringify(savedTripArray));
-    
-    console.log('savedTripArray')
   };
 
 function saveTripArrayToStorage(savedTripArray) {
@@ -51,7 +52,7 @@ function handleSaveTrip(event) {
       sD: startDate,
     };
 
-    const savedTripArray = readProjectsFromStorage();
+    const savedTripArray = getTripArray();
     savedTripArray.push(newTrip);
   
     saveTripArrayToStorage(savedTripArray);
@@ -65,5 +66,5 @@ function handleSaveTrip(event) {
   }
 
 //event listeners go at the bottom
-saveBtn.addEventListener('submit', createTripInput);
+saveBtn.addEventListener('click', createTripInput);
 

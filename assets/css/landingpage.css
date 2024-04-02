@@ -57,3 +57,17 @@ h2 {
   transition: opacity 0.5s ease-in-out;
   opacity: 0.5;
 }
+
+#hidden {
+  display: none;
+}
+
+#close-modal {
+  background-color: green;
+}
+
+input {
+  border-radius: 5px;
+  border-color: black;
+  border-width: 2px;
+}
