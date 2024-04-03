@@ -18,6 +18,7 @@ header h1 {
   font-size: 50px;
   font-weight: bold;
   margin-left: 20px;
+  align-items: center;
 }
 
 h2 {
@@ -66,8 +67,23 @@ h2 {
   background-color: green;
 }
 
-input {
+.inputs {
+  display: block;
   border-radius: 5px;
   border-color: black;
   border-width: 2px;
+  margin: 10px;
+  width: 300px;
+}
+
+/* .modal-container {
+  display: block;
+} */
+
+.city-names {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  padding: 0px;
 }
