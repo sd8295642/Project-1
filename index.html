@@ -11,6 +11,9 @@
       type="text/css"
       href="./assets/css/landingpage.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -79,11 +82,13 @@
             class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
           >
             <div class="flex flex-shrink-0 items-center">
+              <a href="./index.html">
               <img
                 class="h-8 w-auto"
                 src="https://www.flagcolorcodes.com/data/flag-of-texas.png"
                 alt="Texas Flag"
               />
+            </a>
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
@@ -117,16 +122,20 @@
                       <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                           <div class="sm:flex sm:items-start">
-                            <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                              <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                              </svg>
+                            <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10">
+                              <img
+                class="h-8 w-auto"
+                src="https://www.flagcolorcodes.com/data/flag-of-texas.png"
+                alt="Texas Flag"
+              />
                             </div>
                             <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                               <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Create Your Trip!</h3>
                               <div class="mt-2">
-                                <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
-                                <input id="trip-name" type="text">                      
+                          
+                                <input class="inputs" id="trip-name" type="text" placeholder="What would you like to name your trip?">
+                                <input class="inputs" id="trip-name" type="text" placeholder="Where would you like to go?"> 
+                                From:<input class="inputs" id="start-date" type="date"> To:<input class="inputs" id="finish-date" type="date">              
                               </div>
                             </div>
                           </div>
@@ -141,9 +150,14 @@
                 </div>
 
                 <a
-                  href="#"
+                  href="./savedtrips.html"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >Saved Trips</a
+                >
+                <a
+            href="#"
+             class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              >Things to do</a
                 >
               </div>
             </div>
@@ -195,6 +209,12 @@
             class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >Saved Trips</a
           >
+          <a
+            href="#"
+             class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              >Things to do</a
+                >
+
           <!-- <a
             href="#"
             class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
@@ -215,28 +235,28 @@
                 <h2 class="city-names">Austin</h2>
             </div>
             <div class="card">
-                <h2>Houston</h2>
+                <h2 class="city-names">Houston</h2>
             </div>
             <div class="card">
-                <h2>Dallas</h2>
+                <h2 class="city-names">Dallas</h2>
             </div>
             <div class="card">
-              <h2>San Antonio</h2>
+              <h2 class="city-names">San Antonio</h2>
           </div>
         </div>
 
         <div class="container-2">
           <div class="card">
-              <h2>Panhandle</h2>
+              <h2 class="city-names">Panhandle</h2>
           </div>
           <div class="card">
-              <h2>Rio Grande Valley</h2>
+              <h2 class="city-names">Rio Grande Valley</h2>
           </div>
           <div class="card">
-              <h2>East Texas</h2>
+              <h2 class="city-names">East Texas</h2>
           </div>
           <div class="card">
-            <h2>West Texas</h2>
+            <h2 class="city-names">West Texas</h2>
         </div>
       </div>
     </main>
