@@ -1,70 +1,73 @@
-const tripName = document.getElementById('trip-name')
-const tripLocation = document.getElementById('trip-location')
-const tripStartDate = document.getElementById('trip-start')
-const tripEndDate = document.getElementById('trip-end')
-const saveBtn = document.getElementById('close-modal')
+// const tripName = document.getElementById('trip-name')
+// const tripLocation = document.getElementById('trip-location')
+// const tripStartDate = document.getElementById('start-date')
+// const tripEndDate = document.getElementById('finish-date')
+// const saveBtn = document.getElementById('close-modal')
 
-function getTripArray() {
-    let savedTripArray = JSON.parse(localStorage.getItem('savedTripArray'));
+// function getTripArray() {
+//     let savedTripArray = JSON.parse(localStorage.getItem('savedTripArray'));
   
-    if (!savedTripArray) {
-      savedTripArray = [];
-    }
-    console.log(savedTripArray)
+//     if (!savedTripArray) {
+//       savedTripArray = [];
+//     }
   
-    return savedTripArray;
-  }
+//     return savedTripArray;
+//   }
 
-getTripArray();
 
-function createTripInput(event) {
-    event.preventDefault();
+// // function createTripInput(event) {
+// //     event.preventDefault();
     
-    let savedTripArray = getTripArray();
+// //     let savedTripArray = getTripArray();
 
-    const savedTrip = document.querySelector('#trip-name').value;
+// //     const savedTrip = document.querySelector('#trip-name').value;
   
-    if (!savedTrip) {
-      console.error('You need a search input value!');
-      return;
-    };
+// //     if (!savedTrip) {
+// //       console.error('You need a search input value!');
+// //       return;
+// //     };
 
-    savedTripArray.push(savedTrip); 
+// //     savedTripArray.push(savedTrip); 
 
-    localStorage.setItem("trips", JSON.stringify(savedTripArray));
-  };
+// //     localStorage.setItem("trips", JSON.stringify(savedTripArray));
+// //   };
 
-function saveTripArrayToStorage(savedTripArray) {
-    localStorage.setItem('trips', JSON.stringify(savedTripArray));
-  }
+// // function saveTripArrayToStorage(savedTripArray) {
+// //     localStorage.setItem('savedTripArray', JSON.stringify(savedTripArray));
+// //   }
 
-function handleSaveTrip(event) {
-    event.preventDefault();
-  
+// function saveTripArrayToStorage(newTrip) {
+//   let savedTripArray = getTripArray();
+//   savedTripArray.push(newTrip);
+//   localStorage.setItem('savedTripArray', JSON.stringify(savedTripArray));
+// }
+
+// function handleSaveTrip(event) {
+//     event.preventDefault();
     
-    const name = tripName.value.trim();
-    const location = tripLocation.value;
-    const startDate = tripStartDate.value;
+//     const name = tripName.value.trim();
+//     const location = tripLocation.value;
+//     const startDate = tripStartDate.value;
+//     const endDate = tripEndDate.value;
   
-    const newTrip = {
-      n: name,
-      t: location,
-      sD: startDate,
-    };
+//     const newTrip = {
+//       n: name,
+//       t: location,
+//       sD: startDate,
+//       eD: endDate,
+//     };
 
-    const savedTripArray = getTripArray();
-    savedTripArray.push(newTrip);
+//     let savedTripArray = getTripArray();
+//     savedTripArray.push(newTrip);
   
-    saveTripArrayToStorage(savedTripArray);
+//     saveTripArrayToStorage(savedTripArray);
 
-    //printProjectData();
-  
-    // // ? Clear the form inputs
-    // tripName.value('');
-    // tripLocation = '';
-    // startDate.value('');
-  }
+//     // // ? Clear the form inputs
+//     // tripName.value('');
+//     // tripLocation = '';
+//     // startDate.value('');
+//   }
 
-//event listeners go at the bottom
-saveBtn.addEventListener('click', createTripInput);
+// //event listeners go at the bottom
+// saveBtn.addEventListener('click', handleSaveTrip);
 
