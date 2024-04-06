@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <!-- 8f272218-27d1-4c4d-bbea-ce488f0ea76d -->
 <head>
     <title>Texas Travel Planner</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css"
+    />
+    
     <link rel="stylesheet" type="text/css" href="./assets/css/savedtrips.css" />
 </head>
 
@@ -192,6 +197,15 @@
         </div>
       </div>
     </nav>
+    <section style="width: 50%; height: 50%; margin: 0; padding: 0;">
+      <div id="map" style="width: 50%; height: 50%;"></div>
+      <script>
+        var map = tt.map({
+          key: "ubxbhNVRRVOt6N4JquNTD2lOiE4tVSUQ",
+          container: "map",
+        })
+      </script>
+    </section>
 
 <main id="trip-cards">
 
@@ -200,7 +214,7 @@
 <footer></footer>
 
 </body>
-
+<script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
 <script src="./assets/js/savedtrips.js"></script>
 <!-- <script src="./assets/js/script.js"></script> -->
 </html>
