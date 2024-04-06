@@ -14,10 +14,6 @@ function getTripArray() {
     return savedTripArray;
   }
 
-// function saveTripArrayToStorage(newTrip) {
-//   localStorage.setItem('savedTripArray', JSON.stringify(newTrip));
-// }
-
 function handleSaveTrip(event) {
     event.preventDefault();
     
@@ -36,24 +32,22 @@ function handleSaveTrip(event) {
     let savedTripArray = getTripArray();
     savedTripArray.push(newTrip);
     localStorage.setItem('savedTripArray', JSON.stringify(savedTripArray));
-    // saveTripArrayToStorage(savedTripArray);
 
-
-    printTripCard();
+    displaySavedTripCards()
   
-    // let tripName = '';
-    // let tripLocation = '';
-    // let tripStartDate = '';
-    // let tripEndDate = '';
+    tripName.value = '';
+    tripLocation.value = '';
+    tripStartDate.value = '';
+    tripEndDate.value = '';
   }
-function printTripCard(){
+function printTripCard(trip){
   const tripCard = `
   <div class="card card-compact w-96 bg-base-100 shadow-xl">
   <figure><img src="#" alt="#" /></figure>
   <div class="card-body">
-    <h2 class="card-title">${tripName.value}</h2>
-    <p>Destination: ${tripLocation.value}</p>
-    <p>Date Range: ${tripStartDate.value} to ${tripEndDate.value}</p>
+    <h2 class="card-title">${trip.n}</h2>
+    <p>Destination: ${trip.t}</p>
+    <p>Date Range: ${trip.sD} to ${trip.eD}</p>
     <div class="card-actions justify-end">
       <button class="btn btn-primary">Delete</button>
     </div>
@@ -61,12 +55,14 @@ function printTripCard(){
 </div>
   `;
     htmlCard = document.getElementById('trip-cards')
-    htmlCard.innerHTML = tripCard
+    htmlCard.innerHTML += tripCard
 }
 
 function displaySavedTripCards () {
+  var savedTripArray = getTripArray()
+  console.log(savedTripArray)
   for (i = 0; i < savedTripArray.length; i++) {
-    printTripCard(savedTripArray)
+    printTripCard(savedTripArray[i])
   }
 }
 
@@ -89,7 +85,6 @@ document.getElementById("open-modal").addEventListener("click", function () {
     modal.style.display = "none";
   });
   
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   getTripArray();
-  //   displaySavedTripCards(savedTripArray);
-  // });
+  document.addEventListener("DOMContentLoaded", () => {
+    displaySavedTripCards();
+  });

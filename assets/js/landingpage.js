@@ -1,15 +1,3 @@
-
-
-// const locationArray = [document.querySelector('#austin'), 'Houston', 'Dallas', 'San&Antonio']
-
-// function getLocation(locationArray){
-  
-//   for(i = 0; i < locationArray.length; i++){
-//     let location = locationArray[i]
-//   }
-//   return location;
-// }
-
 async function getMinMaxTemp(location){
   const options = {method: 'GET', headers: {accept: 'application/json'}};
 
@@ -42,7 +30,7 @@ async function displayMinMaxTemp(min, max) {
     console.log(data)
 
     const temperatureDisplay = `
-    <p>Temperature Range: ${data.min} to ${data.max}</p>
+    <p>Current Temperature Range: ${data.min} to ${data.max}</p>
     `;
     htmlTempArray[i].innerHTML = temperatureDisplay
     
