@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Responsive Web Design</title>
+    <title>Texas Travel Planner</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,14 +11,15 @@
       type="text/css"
       href="./assets/css/landingpage.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header>
       <h1>Texas Travel Planner</h1>
       <nav class="row">
-        <!-- <button id="plan-trip">Plan a Trip</button>
-        <button id="saved-trips">Saved Trips</button> -->
       </nav>
     </header>
 
@@ -79,36 +80,82 @@
             class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
           >
             <div class="flex flex-shrink-0 items-center">
+              <a href="./index.html">
               <img
                 class="h-8 w-auto"
                 src="https://www.flagcolorcodes.com/data/flag-of-texas.png"
                 alt="Texas Flag"
               />
+            </a>
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <div class="hidden" id="modal" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                  <!--
+                    Background backdrop, show/hide based on modal state.
+                
+                    Entering: "ease-out duration-300"
+                      From: "opacity-0"
+                      To: "opacity-100"
+                    Leaving: "ease-in duration-200"
+                      From: "opacity-100"
+                      To: "opacity-0"
+                  -->
+                  <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+                
+                  <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                    <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                      <!--
+                        Modal panel, show/hide based on modal state.
+                
+                        Entering: "ease-out duration-300"
+                          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                          To: "opacity-100 translate-y-0 sm:scale-100"
+                        Leaving: "ease-in duration-200"
+                          From: "opacity-100 translate-y-0 sm:scale-100"
+                          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                      -->
+                      <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                          <div class="sm:flex sm:items-start">
+                            <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10">
+                              <img
+                class="h-8 w-auto"
+                src="https://www.flagcolorcodes.com/data/flag-of-texas.png"
+                alt="Texas Flag"
+              />
+                            </div>
+                            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                              <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Create Your Trip!</h3>
+                              <div class="mt-2">
+                          
+                                <input class="inputs" id="trip-name" type="text" placeholder="What would you like to name your trip?">
+                                <input class="inputs" id="trip-location" type="text" placeholder="Where would you like to go?"> 
+                                From:<input class="inputs" id="start-date" type="date"> To:<input class="inputs" id="finish-date" type="date">              
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                          <button id="close-modal" type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Save</button>
+                          <button id="close-modal2" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <a
-                  href="#"
-                  class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                  aria-current="page"
-                  >Plan a Trip</a
+                  href="./savedtrips.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium nav-text"
+                  >Trips</a
                 >
                 <a
-                  href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Saved Trips</a
+            href="https://gov.texas.gov/travel-texas"
+             class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium nav-text"
+              >Things to do</a
                 >
-                <!-- <a
-                  href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Projects</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Calendar</a
-                > -->
               </div>
             </div>
           </div>
@@ -156,9 +203,15 @@
           >
           <a
             href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium nav-text"
             >Saved Trips</a
           >
+          <a
+            href="#"
+             class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium nav-text"
+              >Things to do</a
+                >
+
           <!-- <a
             href="#"
             class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
@@ -173,40 +226,59 @@
       </div>
     </nav>
 
-    <main>
+    <main >
         <div class="container-1">
-            <div class="card">
+            <div class="card austin">
                 <h2 class="city-names">Austin</h2>
+                <div data-location='austin' class="temp-display"></div>
             </div>
-            <div class="card">
-                <h2>Houston</h2>
+            <div class="card houston">
+                <h2 class="city-names">Houston</h2>
+                <div data-location='houston' class="temp-display"></div>
             </div>
-            <div class="card">
-                <h2>Dallas</h2>
+            <div class="card dallas">
+                <h2 class="city-names">Dallas</h2>
+                <div data-location='dallas' class="temp-display"></div>
             </div>
-            <div class="card">
-              <h2>San Antonio</h2>
+            <div class="card san-antonio">
+              <h2 class="city-names">San Antonio</h2>
+              <div data-location='san&antonio' class="temp-display"></div>
           </div>
         </div>
 
         <div class="container-2">
-          <div class="card">
-              <h2>Panhandle</h2>
+          <div class="card panhandle">
+              <h2 class="city-names">Panhandle</h2>
+              <div data-location='lubbock' class="temp-display"></div>
           </div>
-          <div class="card">
-              <h2>Rio Grande Valley</h2>
+          <div class="card rio-grande">
+              <h2 class="city-names">Rio Grande Valley</h2>
+              <div data-location='mcallen' class="temp-display"></div>
           </div>
-          <div class="card">
-              <h2>East Texas</h2>
+          <div class="card east-texas">
+              <h2 class="city-names">East Texas</h2>
+              <div data-location='tyler' class="temp-display"></div>
           </div>
-          <div class="card">
-            <h2>West Texas</h2>
+          <div class="card west-texas">
+            <h2 class="city-names">West Texas</h2>
+            <div data-location='midland' class="temp-display"></div>
         </div>
       </div>
+
+      
+      
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="foot-stack">
+      <p class="footer">A group project by:</p>
+      </div>
+      <div class="foot-stack">
+      <p class="footer">Guillermo Saenz, Reid Herrera, Shannon Dardis, Luis Aldaz, Clarence Butler</p>
+      </div>
+    </footer>
   </body>
 
   <script src="./assets/js/landingpage.js"></script>
+
 </html>
