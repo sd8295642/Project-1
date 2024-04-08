@@ -2,22 +2,29 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+main {
+  background-image: url("../img/texas-repeat.png");
+  background-repeat: repeat;
+}
+
 body {
   width: auto;
 }
 
 header {
   display: flex;
-  height: 200px;
+  height: 100px;
   width: auto;
   align-items: center;
-  background-color: pink;
+  background-color: rgb(31, 41, 55);
+  color: white;
 }
 
 header h1 {
   font-size: 50px;
   font-weight: bold;
   margin-left: 20px;
+  align-items: center;
 }
 
 h2 {
@@ -25,8 +32,17 @@ h2 {
   text-align: center;
   font-weight: bold;
   padding: 10px;
-  background-color: red;
-  border-radius: 8px 8px 0 0px;
+  background-color: rgb(25, 30, 92, 0.8);
+  width: 100%;
+  height: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.nav-text {
+  color: white;
 }
 
 .container-1 {
@@ -38,22 +54,209 @@ h2 {
 
 .container-2 {
   display: flex;
-  height: 500px;
+  height: auto;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 200px;
+  width: 20%;
   height: 300px;
   margin: 15px;
-  background-color: lightsalmon;
   border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 /* =========Hover========= */
 .card:hover {
   cursor: pointer;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0.5;
+  transform: scale(1.1);
+  transition: 1;
+}
+
+#hidden {
+  display: none;
+}
+
+#close-modal {
+  background-color: green;
+}
+
+.inputs {
+  display: block;
+  border-radius: 5px;
+  border-color: black;
+  border-width: 2px;
+  margin: 10px;
+  width: 300px;
+}
+
+/* .modal-container {
+  display: block;
+} */
+
+.city-names {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  padding: 0px;
+  color: white;
+  opacity: 1;
+  line-height: 1;
+}
+
+/* CITY CARD BACKGROUNDS */
+
+.houston {
+  background-image: url("../img/houston-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.austin {
+  background-image: url("../img/austin-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dallas {
+  background-image: url("../img/dallas-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.san-antonio {
+  background-image: url("../img/san-antonio-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panhandle {
+  background-image: url("../img/panhandle-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.rio-grande {
+  background-image: url("../img/rio-grande-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.east-texas {
+  background-image: url("../img/east-texas-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.west-texas {
+  background-image: url("../img/west-texas-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: 100px;
+  background-color: rgb(31, 41, 55);
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  padding: 20px;
+}
+
+.footstack {
+  display: block;
+  height: auto;
+}
+
+.footer {
+  font-family: "Bebas Neue", sans-serif;
+  display: block;
+  text-align: center;
+}
+
+.temperature {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  padding: 0px;
+  color: white;
+  opacity: 1;
+  line-height: 1;
+  text-align: center;
+  background-color: rgb(25, 30, 92, 0.8);
+
+  
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 390px) {
+  /* Your CSS rules for screens with a maximum width of 390px */
+  .card {
+    width: 33%;
+    height: 200px;
+  }
+
+  .city-names {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 936px) {
+  /* Your CSS rules for screens with a width between 391px and 936px */
+  .card {
+    width: 33%;
+    height: 200px;
+  }
+  .city-names {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    padding: 0px;
+    
+  }
 }
