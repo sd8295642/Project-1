@@ -221,11 +221,12 @@ footer {
   padding: 0px;
   color: white;
   opacity: 1;
-  line-height: 1;
+  line-height: 2;
   text-align: center;
   background-color: rgb(25, 30, 92, 0.8);
-
-  
+  border: 2px solid rgba(25, 30, 92, 0.8); /* Create a border with the same color as background */
+  margin: 0 auto;
+  padding-inline: 50px;
 }
 
 /* MEDIA QUERY */
