@@ -1,3 +1,6 @@
+This is a simple trip planning app that stores user input and displays it on the page. This project was created by Luis Aldaz, Clarence, Butler, Shannon Dardis, Reid Herrera, and Guillermo Saenz.
+
+
 User Story 
 As a user, I want to view a webpage with destinations for a Texas vacation and then build a trip outline and save it to my trips page
 
@@ -13,4 +16,4 @@ Github Link: https://github.com/sd8295642/Texas-Travel-Planner
 
 Deployed Site Link:
 
-[Demo Image] ()
+[Demo Image] (assets\demo-image.JPG)
