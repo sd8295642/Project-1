@@ -30,7 +30,7 @@ async function displayMinMaxTemp(min, max) {
     console.log(data)
 
     const temperatureDisplay = `
-    <p>Current Temperature Range: ${data.min} to ${data.max}</p>
+    <p class="temperature">Current Temperature Range: ${Math.ceil(data.min)} to ${Math.ceil(data.max)}</p>
     `;
     htmlTempArray[i].innerHTML = temperatureDisplay
     
