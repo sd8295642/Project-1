@@ -1,7 +1,7 @@
 async function getMinMaxTemp(location){
   const options = {method: 'GET', headers: {accept: 'application/json'}};
 
-const response = await fetch(`https://api.tomorrow.io/v4/weather/forecast?location=${location}&apikey=J69wO6KNXCDrXEgP8Z4vVwPcQJ72S17t`, options)
+const response = await fetch(`https://api.tomorrow.io/v4/weather/forecast?location=${location}&apikey=3nR47HQePe2j53Ijj4suJEUVicSAPSp7`, options)
     // alternate api keys: rhJyv4LoiHg6oPHSEP9vvI1YYzNsO1UR     RK9czsXOwrhgSXWaoUDkK3i1StfMrJru      3nR47HQePe2j53Ijj4suJEUVicSAPSp7
     const data = await response.json()
 
@@ -40,19 +40,4 @@ async function displayMinMaxTemp(min, max) {
 
 displayMinMaxTemp();
 
-
-document.getElementById("open-modal").addEventListener("click", function () {
-  var modal = document.getElementById("modal");
-  modal.style.display = "block";
-});
-
-document.getElementById("close-modal").addEventListener("click", function () {
-  var modal = document.getElementById("modal");
-  modal.style.display = "none";
-});
-
-document.getElementById("close-modal2").addEventListener("click", function () {
-  var modal = document.getElementById("modal");
-  modal.style.display = "none";
-});
 
