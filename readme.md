@@ -14,6 +14,6 @@ THEN I am taken to my saved trips page and can view and edit previously saved it
 
 Github Link: https://github.com/sd8295642/Texas-Travel-Planner
 
-Deployed Site Link:
+Deployed Site Link: https://sd8295642.github.io/Texas-Travel-Planner/
 
 [Demo Image] (assets\demo-image.JPG)
