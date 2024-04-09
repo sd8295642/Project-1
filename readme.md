@@ -16,4 +16,4 @@ Github Link: https://github.com/sd8295642/Texas-Travel-Planner
 
 Deployed Site Link: https://sd8295642.github.io/Texas-Travel-Planner/
 
-![alt text](assets/img/demo-image.JPG)
+![alt text](./assets/img/demo-image.JPG)
